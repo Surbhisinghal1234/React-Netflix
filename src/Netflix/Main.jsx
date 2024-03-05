@@ -4,13 +4,15 @@ import endpoints from "./endpoints";
 import "./Netflix.css";
 import Header from "./Header";
 import Banner from "./Banner";
-
+// import Trailer from "./Trailer";
 function Main() {
   return (
     <>
       <section id="originals">
         <Header />
         <Banner />
+        {/* <Trailer /> */}
+
         <Row
           endpoint={endpoints.fetchNetflixOriginals}
           heading="Netflix Originals"

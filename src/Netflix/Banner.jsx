@@ -11,6 +11,7 @@ function Banner() {
   };
 
   const [bannerImg, setBannerImg] = useState({});
+
   const img_baseURL = "https://image.tmdb.org/t/p/original/";
   const API_KEY = "59e27e00b6013f55ea24b194c30559bb";
   const baseURL = "https://api.themoviedb.org/3";
@@ -19,8 +20,7 @@ function Banner() {
     axios
       .get(
         // `https://api.themoviedb.org/3/discover/movie?api_key=${API_KEY}&language=en-US`
-        baseURL + endpoints.fetchNetflixOriginals
-      )
+        baseURL + endpoints.fetchNetflixOriginals)
       .then((response) => {
         console.log(response.data.results);
         setBannerImg(
@@ -48,7 +48,7 @@ function Banner() {
           </div>
         </nav>
         <section id="text-head">
-          <h1>{bannerImg.original_name}</h1>
+          <h1>{bannerImg.original_name }</h1>
           <div className="text">
             <a href="">Play</a>
             <a href="">My List</a>
