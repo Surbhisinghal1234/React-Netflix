@@ -49,6 +49,7 @@ nav {
   background-color: #fff;
   color: #000;
   transition: all 0.5s ease-in-out;
+  transform: scale(1.1);
 }
 
 .text p {
@@ -80,6 +81,15 @@ nav.colorChange {
   padding: 18px;
   color: #fff;
   text-shadow: 1px 1px 1px aquamarine;
+
+  /* #6b1a1a */
+}
+.movie-wrapper h2:hover {
+  background: linear-gradient(#ab4c4c, #fff);
+  background-clip: text;
+  color: transparent;
+  transition: color 0.3s ease;
+  text-shadow: none;
 }
 .movies {
   display: flex;
@@ -93,6 +103,7 @@ nav.colorChange {
   margin: 0 8px;
   border-radius: 4px;
   box-shadow: 2px 2px 2px gray;
+  cursor: pointer;
 }
 
 .movies img:hover {
@@ -115,5 +126,84 @@ nav.colorChange {
 }
 .trailer {
   margin: 2rem auto 0;
-  
+}
+.trailerShow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000000d5;
+  z-index: 5;
+}
+.trailerShow-head {
+  position: relative;
+}
+.trailerShow .closeBtn {
+  position: fixed;
+  right: 20rem;
+  top: 0rem;
+  font-size: 3rem;
+  cursor: pointer;
+  /* z-index: 5; */
+  color: #fff;
+}
+
+@media screen and (min-width: 300px) and (max-width: 570px) {
+  .trailerShow .closeBtn {
+    position: absolute;
+    right: 1rem;
+    top: 0rem;
+  }
+  body {
+    background-color: #fff;
+  }
+  .movie-wrapper h2 {
+    background: linear-gradient(#a44126, black);
+
+    background-clip: text;
+    color: transparent;
+    transition: color 0.3s ease;
+    text-shadow: none;
+    font-weight: 900;
+  }
+  .movies img {
+    box-shadow: 4px 4px 4px #0000009a;
+  }
+}
+@media screen and (min-width: 571px) and (max-width: 992px) {
+  .trailerShow .closeBtn {
+    position: absolute;
+    right: 1rem;
+    top: 0rem;
+  }
+  body {
+    background: linear-gradient(
+      to right,
+      rgba(0, 128, 0, 0.146),
+      rgba(199, 112, 112, 0.441)
+    );
+  }
+  .movie-wrapper h2 {
+    background: linear-gradient(to right, #a46726, black);
+
+    background-clip: text;
+    color: transparent;
+    transition: color 0.3s ease;
+    text-shadow: none;
+    font-weight: 900;
+  }
+}
+@media screen and (min-width: 993px) and (max-width: 1300px) {
+  .trailerShow .closeBtn {
+    position: absolute;
+    right: 16rem;
+    top: 0rem;
+  }
+  body {
+    background-color: #000;
+  }
 }

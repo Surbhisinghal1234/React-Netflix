@@ -2,16 +2,12 @@ import React from "react";
 import Row from "./Row";
 import endpoints from "./endpoints";
 import "./Netflix.css";
-import Header from "./Header";
 import Banner from "./Banner";
-// import Trailer from "./Trailer";
 function Main() {
   return (
     <>
       <section id="originals">
-        <Header />
         <Banner />
-        {/* <Trailer /> */}
 
         <Row
           endpoint={endpoints.fetchNetflixOriginals}

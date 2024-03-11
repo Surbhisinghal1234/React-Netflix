@@ -6,7 +6,7 @@ function Banner() {
   const [scrollBot, setScrollBot] = useState(false);
 
   window.onscroll = () => {
-    if (window.scrollY > 200) setScrollBot(true);
+    if (window.scrollY > 150) setScrollBot(true);
     else setScrollBot(false);
   };
 
@@ -20,7 +20,8 @@ function Banner() {
     axios
       .get(
         // `https://api.themoviedb.org/3/discover/movie?api_key=${API_KEY}&language=en-US`
-        baseURL + endpoints.fetchNetflixOriginals)
+        baseURL + endpoints.fetchNetflixOriginals
+      )
       .then((response) => {
         console.log(response.data.results);
         setBannerImg(
@@ -48,7 +49,7 @@ function Banner() {
           </div>
         </nav>
         <section id="text-head">
-          <h1>{bannerImg.original_name }</h1>
+          <h1>{bannerImg.original_name}</h1>
           <div className="text">
             <a href="">Play</a>
             <a href="">My List</a>
